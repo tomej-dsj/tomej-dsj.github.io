@@ -1,0 +1,187 @@
+/* ===== RESET POD MENU ===== */
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===== UKŁAD ===== */
+.menu > div {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1rem;
+}
+
+.menu .home {
+    background: #111827;
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+}
+
+.menu .home a {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.menu .home a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 0.95;
+}
+
+/* ===== AKTYWNA STRONA GŁÓWNA (opcjonalnie) ===== */
+.menu .home a.active {
+    text-decoration: underline;
+}
+
+/* ===== SEKCJE (DSJ2 / DSJ3 / DSJ4) ===== */
+.menu .sekcje {
+    background: #f9fafb;
+}
+
+.menu .sekcje a {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #374151;
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu .sekcje a:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* ===== PODSTRONY (Historia / Pliki / Inne) ===== */
+.menu .podstrony {
+    background: #ffffff;
+}
+
+.menu .podstrony a {
+    font-size: 0.95rem;
+    color: #4b5563;
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu .podstrony a:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+/* ===== AKTYWNA SEKCJA (TWÓJ KOD + DELIKATNE ULEPSZENIE) ===== */
+.sekcje a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #111827;
+}
+
+/* ===== OPCJONALNIE: AKTYWNA PODSTRONA ===== */
+.podstrony a.active {
+    background: #111827;
+    color: #ffffff;
+}
+
+/* ===== LISTA DOWNLOADÓW ===== */
+.download-list {
+    list-style: none;
+    margin: 2rem auto;
+    padding: 0;
+    max-width: 700px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ===== POJEDYNCZY ELEMENT ===== */
+.download-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* ===== LINK DO POBRANIA ===== */
+.download-list a {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.download-list a:hover {
+    text-decoration: underline;
+}
+
+/* ===== DATA ===== */
+.download-list .date {
+    color: #6b7280;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* ===== ELEMENT BEZ LINKU (BRAK DOWNLOADU) ===== */
+.download-list li:not(:has(a)) {
+    opacity: 0.65;
+    font-style: italic;
+}
+
+/* ===== HOVER ===== */
+.download-list li:hover {
+    background: #f9fafb;
+}
+
+.download-list li.latest {
+    background: #eef2ff;
+    font-weight: 600;
+}
+
+.download-list small {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.history {
+    max-width: 700px;
+    margin: 2rem auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.history h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.history h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #1f2937;
+}
+
+.history ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.history li {
+    margin-bottom: 0.3rem;
+}
