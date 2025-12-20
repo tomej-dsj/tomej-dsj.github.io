@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deluxe Ski Jump 2</title>
+    <title>Deluxe Ski Jump 3</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -27,31 +27,65 @@
         </div>
     </nav>
 
+    <main>
+        <section id="description">
+            <h1 class="fancy-title">Deluxe Ski Jump 3</h1>
+            <p id="text">
+                Deluxe Ski Jump 3 to wciągająca gra w skoki narciarskie w pełnej grafice 3D.<br><br>
+                Rywalizuj ze wszystkimi znajomymi na 40 unikalnych skoczniach w zawodach Pucharu Świata lub Pucharu Drużyn. Możesz skakać zarówno na zaśnieżonych zimowych skoczniach, jak i na skoczniach pokrytych plastikiem latem.<br><br>
+                W DSJ3 Online możesz skakać i rozmawiać w czasie rzeczywistym z innymi fanami skoków narciarskich z całego świata.<br>
+                Skoki narciarskie są modelowane dokładnie według fizyki rzeczywistego świata. Sterowanie skoczkiem odbywa się intuicyjnie za pomocą precyzyjnej kontroli myszą.<br><br>
+                Do dyspozycji jest dziesięć różnych kamer z możliwością przybliżania, z których można obserwować skok. W trybie powtórek skok można analizować w zwolnionym tempie lub klatka po klatce.<br><br>
+                DSJ3 jest łatwy do nauki, lecz trudny do opanowania. Aby dobrze grać, potrzebna jest pewna ręka, szybkie refleksy i umiejętność pełnego wykorzystania przepływów powietrza. Jeśli jesteś wystarczająco dobry, możesz nawet znaleźć się na internetowych rankingach DSJ3.
+            </p>
+        </section>
+    </main>
+
     <script>
         // Funkcja do zmiany języka menu
         function switchMenuLanguage() {
             const lang = navigator.language || navigator.userLanguage;
-            if (!lang.startsWith('pl')) { // jeśli język nie jest polski
-                const translations = {
-                    "Strona Główna": "Home",
-                    "Start": "Start",
-                    "Historia": "History",
-                    "Pliki": "Files",
-                    "Rekordy": "Records",
-                    "Turnieje": "Tournaments"
-                };
+            const menuTranslations = {
+                "Strona Główna": "Home",
+                "Start": "Start",
+                "Historia": "History",
+                "Pliki": "Files",
+                "Rekordy": "Records",
+                "Turnieje": "Tournaments"
+            };
 
-                // Pobieramy wszystkie linki w menu
+            const textTranslations = {
+                "Deluxe Ski Jump 3 to wciągająca gra w skoki narciarskie w pełnej grafice 3D.": 
+                "Deluxe Ski Jump 3 is an addictive ski jumping game in full 3D graphics.",
+                "Rywalizuj ze wszystkimi znajomymi na 40 unikalnych skoczniach w zawodach Pucharu Świata lub Pucharu Drużyn. Możesz skakać zarówno na zaśnieżonych zimowych skoczniach, jak i na skoczniach pokrytych plastikiem latem.":
+                "Compete with all your friends at 40 unique hills in the World Cup or Team Cup events. You can jump on snowy winter hills as well as on plastic-covered summer hills.",
+                "W DSJ3 Online możesz skakać i rozmawiać w czasie rzeczywistym z innymi fanami skoków narciarskich z całego świata.":
+                "In DSJ3 Online you can jump and chat in real time with other ski jumping fans from all around the world.",
+                "Skoki narciarskie są modelowane dokładnie według fizyki rzeczywistego świata. Sterowanie skoczkiem odbywa się intuicyjnie za pomocą precyzyjnej kontroli myszą.":
+                "The ski jumping is modeled precisely according to real world physics. You control the ski jumper's movement intuitively with sensitive mouse controls.",
+                "Do dyspozycji jest dziesięć różnych kamer z możliwością przybliżania, z których można obserwować skok. W trybie powtórek skok można analizować w zwolnionym tempie lub klatka po klatce.":
+                "There are ten different zoomable camera views from which you can watch your jump. In replay mode the jump can be analyzed in slow motion or frame-by-frame.",
+                "DSJ3 jest łatwy do nauki, lecz trudny do opanowania. Aby dobrze grać, potrzebna jest pewna ręka, szybkie refleksy i umiejętność pełnego wykorzystania przepływów powietrza. Jeśli jesteś wystarczająco dobry, możesz nawet znaleźć się na internetowych rankingach DSJ3.":
+                "DSJ3 is easy to learn yet hard to master. Successful playing requires a steady mouse hand, quick reflexes and ability to fully utilize the air flows. If you are good enough you can even make it to the web based DSJ3 ranking lists."
+            };
+
+            if (!lang.startsWith('pl')) {
+                // zmiana menu
                 document.querySelectorAll('nav.menu a').forEach(link => {
                     const text = link.textContent.trim();
-                    if (translations[text]) {
-                        link.textContent = translations[text];
-                    }
+                    if (menuTranslations[text]) link.textContent = menuTranslations[text];
                 });
+
+                // zmiana tekstu głównego
+                const textEl = document.getElementById('text');
+                let html = textEl.innerHTML;
+                for (let plText in textTranslations) {
+                    html = html.replace(plText, textTranslations[plText]);
+                }
+                textEl.innerHTML = html;
             }
         }
 
-        // Uruchamiamy funkcję przy załadowaniu strony
         switchMenuLanguage();
     </script>
 </body>

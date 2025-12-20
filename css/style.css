@@ -185,3 +185,15 @@
 .history li {
     margin-bottom: 0.3rem;
 }
+
+.fancy-title {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #1e90ff, #00ffcc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    text-align: center;
+    margin: 20px 0;
+}
