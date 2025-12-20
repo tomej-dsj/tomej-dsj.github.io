@@ -170,6 +170,30 @@
     margin-bottom: 1rem;
 }
 
+.downloads {
+    max-width: 700px;
+    margin: 2rem auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.downloads h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    max-width: 700px;
+    margin: 2rem auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.description h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
 .history h3 {
     font-size: 1.2rem;
     margin-top: 1rem;
@@ -186,17 +210,6 @@
     margin-bottom: 0.3rem;
 }
 
-.fancy-title {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 3rem;
-    background: linear-gradient(90deg, #1e90ff, #00ffcc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    text-align: center;
-    margin: 20px 0;
-}
 
 p {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* nowoczesna, czytelna czcionka */
@@ -214,4 +227,21 @@ p a {
 
 p a:hover {
     text-decoration: underline;  /* podkreślenie przy najechaniu */
+}
+
+.coming-soon {
+    text-align: center;
+    margin: 3rem 1rem;
+    font-family: system-ui, sans-serif;
+}
+
+.coming-soon h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a73e8;
+}
+
+.coming-soon p {
+    font-size: 1rem;
+    color: #333;
 }

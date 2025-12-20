@@ -8,26 +8,74 @@
 </head>
 <body>
     <nav class="menu">
-    <div class="home">
-        <a href="/">Strona Główna</a>
-    </div>
+        <div class="home">
+            <a href="/">Strona Główna</a>
+        </div>
 
-    <div class="sekcje">
-        <a href="/dsj2/">DSJ2</a>
-        <a href="/dsj3/">DSJ3</a>
-        <a href="/dsj4/">DSJ4</a>
-    </div>
+        <div class="sekcje">
+            <a href="/dsj2/">DSJ2</a>
+            <a href="/dsj3/">DSJ3</a>
+            <a href="/dsj4/">DSJ4</a>
+        </div>
 
-    <div class="podstrony">
-        <a href="index.html">Start</a>
-        <a href="historia.html">Historia</a>
-        <a href="pliki.html">Pliki</a>
-        <a href="rekordy.html">Rekordy</a>
-        <a href="turnieje.html">Turnieje</a>
-    </div>
-</nav>
+        <div class="podstrony">
+            <a href="index.html">Start</a>
+            <a href="historia.html">Historia</a>
+            <a href="pliki.html">Pliki</a>
+            <a href="rekordy.html">Rekordy</a>
+            <a href="turnieje.html">Turnieje</a>
+        </div>
+    </nav>
 
-<script src="/js/menu.js"></script>
+    <main>
+        <section class="description">
+            <h2>Deluxe Ski Jump 2</h2>
+            <p id="text">
+                Deluxe Ski Jump 2 to druga część legendarnej serii gier w skoki narciarskie firmy Mediamond, wydanej na DOS.<br><br>
+                DSJ2 zawiera 32 skocznie. Dostępne tryby gry obejmują Puchar Świata, Puchar Drużynowy oraz trening. DSJ2 obsługuje powtórki i internetową bazę rekordów skoczni. W grze może brać udział jednocześnie do 16 graczy.
+            </p>
+        </section>
+    </main>
 
+    <script>
+        // Funkcja do zmiany języka menu i tekstu głównego
+        function switchMenuLanguage() {
+            const lang = navigator.language || navigator.userLanguage;
+
+            const menuTranslations = {
+                "Strona Główna": "Home",
+                "Start": "Start",
+                "Historia": "History",
+                "Pliki": "Files",
+                "Rekordy": "Records",
+                "Turnieje": "Tournaments"
+            };
+
+            const textTranslations = {
+                "Deluxe Ski Jump 2 to druga część legendarnej serii gier w skoki narciarskie firmy Mediamond, wydanej na DOS.":
+                "Deluxe Ski Jump 2 is the second title in Mediamond's legendary series of DOS-based ski jumping games.",
+                "DSJ2 zawiera 32 skocznie. Dostępne tryby gry obejmują Puchar Świata, Puchar Drużynowy oraz trening. DSJ2 obsługuje powtórki i internetową bazę rekordów skoczni. W grze może brać udział jednocześnie do 16 graczy.":
+                "DSJ2 comes with 32 hills. The available game modes include world cup, team cup and practicing. DSJ2 supports replays and web-based hill records. Up to 16 players can play DSJ2 simultaneously."
+            };
+
+            if (!lang.startsWith('pl')) {
+                // zmiana menu
+                document.querySelectorAll('nav.menu a').forEach(link => {
+                    const text = link.textContent.trim();
+                    if (menuTranslations[text]) link.textContent = menuTranslations[text];
+                });
+
+                // zmiana tekstu głównego
+                const textEl = document.getElementById('text');
+                let html = textEl.innerHTML;
+                for (let plText in textTranslations) {
+                    html = html.replace(plText, textTranslations[plText]);
+                }
+                textEl.innerHTML = html;
+            }
+        }
+
+        switchMenuLanguage();
+    </script>
 </body>
 </html>
