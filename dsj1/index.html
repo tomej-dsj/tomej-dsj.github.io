@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deluxe Ski Jump 2</title>
+    <title>Deluxe Ski Jump 1</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -30,21 +30,10 @@
 
     <script src="/js/menu.js"></script>
     
-    <main>
-        <section class="description">
-            <h2>Deluxe Ski Jump 2</h2>
-            <p id="text">
-                Deluxe Ski Jump 2 to druga część legendarnej serii gier w skoki narciarskie firmy Mediamond, wydanej na DOS.<br><br>
-                DSJ2 zawiera 32 skocznie. Dostępne tryby gry obejmują Puchar Świata, Puchar Drużynowy oraz trening. DSJ2 obsługuje powtórki i internetową bazę rekordów skoczni. W grze może brać udział jednocześnie do 16 graczy.
-            </p>
-        </section>
-    </main>
-
     <script>
-        // Funkcja do zmiany języka menu i tekstu głównego
+        // Funkcja do zmiany języka menu
         function switchMenuLanguage() {
             const lang = navigator.language || navigator.userLanguage;
-
             const menuTranslations = {
                 "Strona Główna": "Home",
                 "Start": "Start",
@@ -52,13 +41,6 @@
                 "Pliki": "Files",
                 "Rekordy": "Records",
                 "Turnieje": "Tournaments"
-            };
-
-            const textTranslations = {
-                "Deluxe Ski Jump 2 to druga część legendarnej serii gier w skoki narciarskie firmy Mediamond, wydanej na DOS.":
-                "Deluxe Ski Jump 2 is the second title in Mediamond's legendary series of DOS-based ski jumping games.",
-                "DSJ2 zawiera 32 skocznie. Dostępne tryby gry obejmują Puchar Świata, Puchar Drużynowy oraz trening. DSJ2 obsługuje powtórki i internetową bazę rekordów skoczni. W grze może brać udział jednocześnie do 16 graczy.":
-                "DSJ2 comes with 32 hills. The available game modes include world cup, team cup and practicing. DSJ2 supports replays and web-based hill records. Up to 16 players can play DSJ2 simultaneously."
             };
 
             if (!lang.startsWith('pl')) {
