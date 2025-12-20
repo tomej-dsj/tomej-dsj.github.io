@@ -197,3 +197,21 @@
     text-align: center;
     margin: 20px 0;
 }
+
+p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* nowoczesna, czytelna czcionka */
+    font-size: 1rem;            /* rozmiar tekstu */
+    line-height: 1.6;           /* odstępy między wierszami dla lepszej czytelności */
+    color: #333;                /* ciemnoszary tekst zamiast czerni – mniej męczy oczy */
+    margin-bottom: 1em;         /* odstęp pod paragrafem */
+    text-align: justify;         /* wyjustowany tekst dla schludnego wyglądu */
+}
+
+p a {
+    color: #1a73e8;             /* kolor linków w paragrafach */
+    text-decoration: none;       /* usuwa podkreślenie */
+}
+
+p a:hover {
+    text-decoration: underline;  /* podkreślenie przy najechaniu */
+}
