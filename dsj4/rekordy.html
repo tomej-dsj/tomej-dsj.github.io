@@ -9,7 +9,7 @@
 <body>
     <nav class="menu">
         <div class="home">
-            <a href="/">Strona Główna</a>
+            <a href="/" data-pl="Strona Główna" data-en="Home">Strona Główna</a>
         </div>
 
         <div class="sekcje">
@@ -20,11 +20,11 @@
         </div>
 
         <div class="podstrony">
-            <a href="index.html">Start</a>
-            <a href="historia.html">Historia</a>
-            <a href="pliki.html">Pliki</a>
-            <a href="rekordy.html">Rekordy</a>
-            <a href="turnieje.html">Turnieje</a>
+            <a href="index.html" data-pl="Start" data-en="Start">Start</a>
+            <a href="historia.html" data-pl="Historia" data-en="History">Historia</a>
+            <a href="pliki.html" data-pl="Pliki" data-en="Files">Pliki</a>
+            <a href="rekordy.html" data-pl="Rekordy" data-en="Records">Rekordy</a>
+            <a href="turnieje.html" data-pl="Turnieje" data-en="Tournaments">Turnieje</a>
         </div>
     </nav>
 
@@ -36,5 +36,16 @@
     </main>
 
     <script src="/js/menu.js"></script>
+
+    <script>
+        // Wykrywanie języka przeglądarki
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('pl')) {
+            document.querySelectorAll('.lang-pl').forEach(el => el.style.display = 'block');
+        } else {
+            document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+        }
+    </script>
+
 </body>
 </html>
