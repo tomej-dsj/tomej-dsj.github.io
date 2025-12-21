@@ -610,5 +610,18 @@
             document.querySelector('.lang-en').style.display = 'block';
         }
     </script>
+
+    <script>
+        function switchLanguage() {
+            const lang = navigator.language || navigator.userLanguage;
+            if (!lang.startsWith('pl')) {
+                document.querySelectorAll('[data-en]').forEach(el => {
+                    el.textContent = el.dataset.en;
+                });
+            }
+        }
+        switchLanguage();
+    </script>
+    
 </body>
 </html>
