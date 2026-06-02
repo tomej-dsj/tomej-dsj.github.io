@@ -245,3 +245,112 @@ p a:hover {
     font-size: 1rem;
     color: #333;
 }
+
+/* Kontener sekcji */
+.records {
+    max-width: 700px;
+    margin: 2rem auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Nagłówek */
+.records h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* Kontener dla wyboru daty */
+.date-picker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+/* Styl pola daty */
+#datePicker {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+#datePicker:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 0 3px rgba(0,119,204,0.2);
+    outline: none;
+}
+
+/* Kontener tabeli */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Styl tabeli */
+#recordsTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Nagłówek tabeli */
+#recordsTable thead {
+    background-color: #0077cc;
+    color: #fff;
+}
+
+#recordsTable th, #recordsTable td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+/* Wiersze tabeli */
+#recordsTable tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+#recordsTable tbody tr:hover {
+    background-color: #e0f0ff;
+}
+
+/* Responsywność */
+@media (max-width: 500px) {
+    #recordsTable th, #recordsTable td {
+        padding: 0.5rem;
+    }
+    .date-picker-container {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+/* Menu zbiorów rekordów */
+.records-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.records-menu button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #0077cc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.records-menu button.active,
+.records-menu button:hover {
+    background-color: #0077cc;
+    color: #fff;
+}
